@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/CTASection";
 import Section from "../components/Section";
 import PricingPlans from "../components/PricingPlans";
 import Footer from "../components/Footer";
@@ -7,6 +7,11 @@ import FAQ from "../components/FAQ";
 import Hero from "../components/Hero";
 import placeholder from "../public/placeholder-600x400.svg";
 import Image from "next/image";
+import Feature from "@/components/Feature";
+import CTASection from "../components/CTASection";
+import Stats from "@/components/Stats";
+import TestimonialSingle from "@/components/TestimonialSingle";
+import LogoPartners from "@/components/LogoPartners";
 
 export default function Home() {
   const questions = [
@@ -31,7 +36,8 @@ export default function Home() {
         imageSrc={placeholder}
         reverse={false} // Imposta a true se vuoi invertire le colonne
       />
-      <HeroSection />
+      <Stats />
+      <CTASection></CTASection>
       <Section title="Why Choose Our Product?">
         <p>
           Our product offers the best solutions to streamline your workflow and
@@ -39,8 +45,11 @@ export default function Home() {
           integration, you'll be up and running in no time.
         </p>
       </Section>
+      <Feature></Feature>
       <PricingPlans />
+      <TestimonialSingle />
       <FAQ questions={questions} twoColumns={true} />
+      <LogoPartners />
       <Footer />
     </>
   );
